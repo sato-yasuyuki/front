@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイマー</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    
+<div class="container">
+
+    <p id="timer">00:00:00</p>
+   
+    
+    <button id="start_stop" class="btn btn-lg btn-primary">START</button>
+</div>
+
+<script>
+  document.getElementById('start_stop').addEventListener('click', function() {
+    let time = new Date();
+
+    setInterval(goTimer, 10)
+  });
+
+  let goTimer = function() {
+      let now = new Date();
+
+      document.getElementById('timer').innerHTML = now.getTime();
+  }
+</script>
+</body>
+</html>
+
+
+
