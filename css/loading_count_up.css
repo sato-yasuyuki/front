@@ -15,6 +15,22 @@
   color:#fff;
 }
 
+/* Loadingバー中央配置　*/
+#loading_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+      z-index: 999;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  
+  /*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+  #loading_text svg{
+      height: 2px;
+  }
+
 
 /*========= レイアウトのためのCSS ===============*/
 
