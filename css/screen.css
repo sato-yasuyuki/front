@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+#screen {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background: #333;
+    color: #fff;
+}
+
+#screen-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*========= 画面遷移のためのCSS ===============*/
