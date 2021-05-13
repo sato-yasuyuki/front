@@ -17,17 +17,25 @@
 </div>
 
 <script>
-  document.getElementById('start_stop').addEventListener('click', function() {
-    let time = new Date();
+    var start;
 
-    setInterval(goTimer, 10)
-  });
+    document.getElementById('start_stop').addEventListener('click', function() {
+    start = new Date();
 
-  let goTimer = function() {
-      let now = new Date();
+    window.setInterval(goTime, 10) //100分の１ミリ秒ごとに経過秒数を表示する
+});
 
-      document.getElementById('timer').innerHTML = now.getTime();
-  }
+var goTime = function() {
+    var now = new Date();
+
+    var milli = now.getTime() - start.getTime();
+    var seconds = Math.floor(milli / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+
+    document.getElementById('timer').innerHTML = hours + ":" + minutes + ":" + seconds;
+}
+
 </script>
 </body>
 </html>
