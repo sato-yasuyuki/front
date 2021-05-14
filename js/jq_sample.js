@@ -26,6 +26,19 @@ $(function() {
  });
 
 
+ //3. hoverイベントでカーソルを合わせたら文字が現れるのを表現
+ $(function() {
+
+  $('#hanarabi').hover(
+    function() {
+      $('#hanarabi-description').fadeIn();
+    },
+    function() {
+      $('#hanarabi-description').fadeOut();
+    }
+  );
+ });
+
 
 
 
