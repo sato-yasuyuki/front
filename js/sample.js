@@ -1,11 +1,12 @@
 $(function() {
-    $("#hide-text").click(function() {
-      $("#text").slideDown();
-    }); 
-});
+  $('.btn').click(function() {
+    var $title = $('#title')
+    
+    $title.css('color', 'red');
+    $title.html('<h2>jqueryの基礎を勉強しています。</h2>');
+    $title.fadeOut(1000);
 
-$(function() {
-  $('li').click(function() {
-      $(this).css('color', 'red')
+    $('#text').css('color', 'blue').html('<p>プログラミングの世界へようこそ！</p>').fadeOut(1000);
   });
 });
+
